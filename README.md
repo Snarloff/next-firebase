@@ -1,34 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Projeto de Cadastro de Tecnologias com Chakra UI, Firebase, Next.js, DatoCMS e GraphQL
 
-First, run the development server:
+Este é um projeto que permite o cadastro e listagem de tecnologias. Foi desenvolvido com Chakra UI para a interface, autenticação com o login do GitHub via Firebase, Next.js para a camada de frontend, DatoCMS para gerenciamento de conteúdo e GraphQL para acessar e listar as tecnologias.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Visão Geral
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Este projeto inclui as seguintes funcionalidades:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Cadastro de tecnologias por meio do DatoCMS, que permite definir títulos e imagens para cada tecnologia.
+- Listagem das tecnologias a partir dos dados armazenados no DatoCMS usando GraphQL.
+- Autenticação de usuário com o GitHub por meio do Firebase.
+- Interface de usuário amigável com Chakra UI.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Tecnologias Utilizadas
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [Chakra UI](https://chakra-ui.com/): Biblioteca de componentes de UI para React.
+- [Firebase](https://firebase.google.com/): Plataforma de desenvolvimento de aplicativos móveis e web.
+- [Next.js](https://nextjs.org/): Framework de React para renderização do lado do servidor.
+- [DatoCMS](https://www.datocms.com/): Plataforma de gerenciamento de conteúdo.
+- [GraphQL](https://graphql.org/): Linguagem de consulta e manipulação de dados.
 
-## Learn More
+## Instalação e Configuração
 
-To learn more about Next.js, take a look at the following resources:
+Certifique-se de ter o Node.js e as dependências do projeto instaladas na sua máquina. Em seguida, siga os passos abaixo:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone este repositório:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```shell
+   git clone https://github.com/Snarloff/next-firebase.git
+   ```
 
-## Deploy on Vercel
+2. Navegue até o diretório do projeto:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```shell
+   cd nome-do-repositorio
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Instale as dependências:
+
+   ```shell
+   npm install
+   ```
+
+4. Crie um arquivo `.env.local` na raiz do projeto e configure as variáveis de ambiente necessárias:
+
+   ```env
+   DATOCMS_READ_ONLY_API_TOKEN=sua-api-token-do-DatoCMS
+   NEXT_PUBLIC_FIREBASE_API_KEY=sua-chave-de-api-do-Firebase
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=seu-domínio-de-autenticação-do-Firebase
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=seu-ID-de-projeto-do-Firebase
+   ```
+
+5. Configure o modelo de dados no DatoCMS para representar as tecnologias com títulos e imagens.
+
+6. Execute o servidor de desenvolvimento:
+
+   ```shell
+   npm run dev
+   ```
+
+7. Acesse a aplicação em seu navegador em `http://localhost:3000`.
+
+## Uso do DatoCMS e GraphQL
+
+Utilize o painel do DatoCMS para criar e gerenciar os dados das tecnologias. Crie modelos, insira dados e publique-os para que possam ser acessados via GraphQL. Configure consultas GraphQL para recuperar as tecnologias e exibi-las em seu aplicativo.
+
+![Exemplo de um dado criado no Dato CMS](https://i.imgur.com/z0j1XQE.png)
+
+## Contribuições
+
+Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga as diretrizes de contribuição e envie um pull request.
+
+## Problemas e Sugestões
+
+Se você encontrar algum problema ou tiver sugestões para melhorar este projeto, por favor, abra uma issue neste repositório.
+
+## Licença
+
+Este projeto está sob a licença [especificar a licença utilizada, se houver].
+
+---
+
+Agradecemos por visitar este repositório e por seu interesse no projeto de cadastro de tecnologias com Chakra UI, Firebase, Next.js, DatoCMS e GraphQL. Esperamos que este projeto seja útil e educativo para outros desenvolvedores interessados em criar aplicativos com essas tecnologias.
